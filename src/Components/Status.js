@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import "../styles.css";
 
 const Status=(props)=> {
-    if(props.tasks.length>0)
+    if(props.tasks.length>0 && props.ButtonsText.length>0)
     {
     let CompletedTasks=0;
     let NotCompletedTasks=0;   
@@ -14,6 +14,7 @@ const Status=(props)=> {
     let MediumPriority=[];
     let LowPrioritycount=0;
     let LowPriority=[];
+	
     return (
         
         <ul>
@@ -55,8 +56,12 @@ const Status=(props)=> {
                       
                       if(but.attr=="disabled")
                       {
-                        let taskname=props.tasks[butindex].name;
-                        let taskisCompleted=props.tasks[butindex].isCompleted;
+                        let taskname="";
+						let taskisCompleted="";
+						if(props.tasks[butindex])
+							taskname=props.tasks[butindex].name;
+						if(props.tasks[butindex])
+							taskisCompleted=props.tasks[butindex].isCompleted;
                         HighPriority[HighPrioritycount]=[taskname];
                        
                         HighPrioritycount++;
@@ -90,8 +95,12 @@ const Status=(props)=> {
                       
                       if(but.attr=="disabled")
                       {
-                        let taskname=props.tasks[butindex].name;
-                        let taskisCompleted=props.tasks[butindex].isCompleted;
+						let taskname="";
+						let taskisCompleted="";
+						if(props.tasks[butindex])
+							taskname=props.tasks[butindex].name;
+						if(props.tasks[butindex])
+							taskisCompleted=props.tasks[butindex].isCompleted;
                         MediumPriority[MediumPrioritycount]=[taskname];
                         // console.log(MediumPriority)
                         MediumPrioritycount++;
@@ -125,8 +134,12 @@ const Status=(props)=> {
                       
                       if(but.attr=="disabled")
                       {
-                        let taskname=props.tasks[butindex].name;
-                        let taskisCompleted=props.tasks[butindex].isCompleted;
+                        let taskname="";
+						let taskisCompleted="";
+						if(props.tasks[butindex])
+							taskname=props.tasks[butindex].name;
+						if(props.tasks[butindex])
+							taskisCompleted=props.tasks[butindex].isCompleted;
                         LowPriority[LowPrioritycount]=[taskname];
                        
                         LowPrioritycount++;
