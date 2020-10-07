@@ -4,6 +4,8 @@ import "../styles.css";
 
 const List=(props)=>{
 
+if(props.items.length>0)
+    {
 
     
     return (
@@ -26,6 +28,12 @@ const List=(props)=>{
             })}
         </ul>
     );
+	}
+	else
+    {
+        return <p></p>;
+    }
+
 }
 
 

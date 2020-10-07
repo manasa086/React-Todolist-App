@@ -7,6 +7,9 @@ var buttons=[];
 const But=(props)=>{
     
     var buttons=props.buttons[props.keys];
+	if(buttons.length>0)
+    {
+
 
     return (<Fragment>
         {
@@ -23,6 +26,11 @@ const But=(props)=>{
             
         }
     </Fragment>);
+	}
+	else
+    {
+        return <p></p>;
+    }
     
 }
 
